@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head th:fragment="head"> 
+        <title>HERCULES</title>
+        <meta charset="UTF-8">
+
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+            <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+            <script th:scr="@{/js/rutinas.js}"></script>
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+            <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+        <header th:fragment="header" class="header">
+
+            <section id="main-header" class="py-2 bg-success text-white">
+                <div class="container">
+                    <div class="lead text-center">
+                        <div class="col-md-12">
+                            <h1><img src="img/eye.png" width="80px" class="mr-2" alt="Eye Icon">   Hermes</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </nav>
+
+        </header>
+
+        <aside th:fragment="sidebar">
+
+            <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" color="black" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        I will not close if you click outside of me.
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <footer th:fragment="footer" class="bg-dark text-white mt-5 p-2 d-flex align-items-center justify-content-center">
+            
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center" style="font-size: 14px">
+                        Roger Pereira Sanchez / Alex Monge Arias / Sebastián Segura Sáenz - Grupo2&COPY; Universidad Fidélitas
+                    </p>
+                </div>
+            </div>
+            
+        </footer>
+
+
+    </body>
+</html>
