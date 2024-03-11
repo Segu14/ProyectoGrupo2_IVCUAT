@@ -19,8 +19,8 @@ header .container {
     font-family: Times New Roman;
 }
 
-.input-group input {
-    width: 400px;
+.col-md-12 img{
+    margin-top: -15px;
 }
 
 button:hover {
@@ -31,4 +31,11 @@ button:hover {
     font-size: 12px;
     font-family: Times New Roman;
     padding-top: 10px;
+}
+
+.lorem {
+    text-align: justify;
+    margin-top: 50px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
