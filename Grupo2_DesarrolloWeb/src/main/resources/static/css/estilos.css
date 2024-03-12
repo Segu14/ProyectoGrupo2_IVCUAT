@@ -14,13 +14,19 @@ header .container {
     height: 80px;
 }
 
-.col-md-12 h1{
-    margin-top: -10px;
+
+.col-md-12, .tituloh1{
+    margin-top: -20px;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
     font-size: 64px;
     font-family: Times New Roman;
+}
+
+.tituloh1:hover, .tituloh1:link, .tituloh1:active, .tituloh1:visited{
+    color:white;
+    text-decoration: none;
 }
 
 .col-md-12 img{
@@ -72,3 +78,13 @@ button:hover {
     width: 1370px;
     height: 780px;
 }
+
+.offcanvas-body {
+        text-align: center; /* Centrar el contenido dentro de la offcanvas-body */
+    }
+
+    .offcanvas-body img {
+        display: block; /* Para asegurar que la imagen sea tratada como bloque */
+        margin: 0 auto; /* Auto-margin para centrar la imagen horizontalmente */
+    }
+
