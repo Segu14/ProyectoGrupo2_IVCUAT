@@ -6,6 +6,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 10 mar 2024, 18:49:52
     Author     : sebas
 */
+header {
+    position: static;
+}
+
 header .container {
     height: 80px;
 }
@@ -33,9 +37,38 @@ button:hover {
     padding-top: 10px;
 }
 
-.lorem {
+.texto {
     text-align: justify;
-    margin-top: 50px;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 17px;
+}
+
+.tituloh2 {
+    margin-top: -45px;
+    font-family: Times New Roman;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tituloh3 {
+    margin-top: 45px;
+    font-family: Times New Roman;
+    text-align: center;
+    font-size: 30px;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+}
+
+.ralph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1370px;
+    height: 780px;
 }
