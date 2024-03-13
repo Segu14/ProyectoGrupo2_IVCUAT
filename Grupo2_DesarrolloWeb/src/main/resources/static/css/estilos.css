@@ -75,16 +75,20 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 1370px;
-    height: 780px;
+    width: 1120px;
+    height: 630px;
 }
 
 .offcanvas-body {
         text-align: center; /* Centrar el contenido dentro de la offcanvas-body */
     }
 
-    .offcanvas-body img {
+.offcanvas-body img {
         display: block; /* Para asegurar que la imagen sea tratada como bloque */
         margin: 0 auto; /* Auto-margin para centrar la imagen horizontalmente */
-    }
+}
 
+.companhias {
+    width: 1500px;
+    margin-left: 20px;
+}
