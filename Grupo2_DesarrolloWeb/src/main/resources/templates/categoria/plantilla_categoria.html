@@ -12,7 +12,7 @@
             <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
             <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
             <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
             <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 
     </head>
@@ -24,7 +24,9 @@
                 <div class="container">
                     <div class="lead text-center">
                         <div class="col-md-12">
-                            <h1><img src="img/eye.png" width="80px" class="mr-2" alt="Eye Icon">   HERMES.</h1>
+                            <a href="/" class="tituloh1"
+                               <h1><img src="img/eye.png" width="80px" class="mr-2" alt="Eye Icon">   HERMES.</h1>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -63,24 +65,20 @@
                         <img src="https://static.vecteezy.com/system/resources/previews/005/005/840/non_2x/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg" height="250" alt="alt"/>
                         <br>
                             
-                        <button type="button" class="btn btn-success">Categoría</button>
+                        <a href="/categoria" role="button" class="btn btn-success">Categoria</a>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-success">Información</button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-success">Redes Sociales</button>
-
+                        <a href="/informacion" role="button" class="btn btn-success">Informacion</a>
+                        
                     </div>
                 </div>
             </div>
 
         </aside>
 
-        <section th:fragment="lorem" class="lorem">
-            <h2>Redes</h2>
+        <section th:fragment="lorem" class="texto">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit, vestibulum neque penatibus feugiat parturient praesent duis imperdiet, auctor posuere nulla habitasse dignissim viverra. Quisque tincidunt quis at platea class ullamcorper diam eget lacus netus lacinia, ad volutpat nisl dignissim suspendisse felis cum hendrerit arcu. In feugiat morbi nisi risus enim inceptos ad, dui vel quam hac fusce pharetra, ut mus aptent ligula nascetur suspendisse.
+                CATEGORIAAA ipsum dolor sit amet consectetur adipiscing elit, vestibulum neque penatibus feugiat parturient praesent duis imperdiet, auctor posuere nulla habitasse dignissim viverra. Quisque tincidunt quis at platea class ullamcorper diam eget lacus netus lacinia, ad volutpat nisl dignissim suspendisse felis cum hendrerit arcu. In feugiat morbi nisi risus enim inceptos ad, dui vel quam hac fusce pharetra, ut mus aptent ligula nascetur suspendisse.
                 <br>
                 Interdum posuere nibh varius laoreet platea fames senectus, dignissim mi tincidunt nascetur mollis eget, purus penatibus blandit dictumst mattis cum. Est facilisi rhoncus venenatis donec per dignissim eget dapibus, purus fermentum faucibus porta justo torquent interdum nascetur ut, vestibulum nulla eu curabitur netus tristique sed. Leo pellentesque blandit enim tempor placerat felis eget lacinia bibendum, ultrices porttitor condimentum nunc platea morbi ullamcorper id, nam lacus egestas turpis cubilia sollicitudin mattis natoque. Ullamcorper magna nascetur a purus mus nulla nisi congue litora iaculis hac felis rutrum habitasse, eget curae dictum suscipit quisque bibendum dapibus dictumst montes malesuada diam imperdiet interdum.
                 <br>

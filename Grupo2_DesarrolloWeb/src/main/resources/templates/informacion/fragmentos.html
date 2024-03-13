@@ -2,10 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-    <body>
+<head>
+    <title th:text="#{header.title}">HERMES</title>
+    <meta charset="UTF-8">
+</head>
 
+    <body>
         <!-- Titulo de la página -->
-        <section th:fragment="titulo">
+        <!-- <section th:fragment="titulo">
             <div class="tituloh2">
                 <h2><b>
                         INFORMACIÓN
@@ -75,7 +79,51 @@
             <img class="companhias" src="img/companhias.png" alt="compañias"/>
             
         </section>
+<body> -->
+
+<!-- Titulo de la página -->
+        <section th:fragment="titulo">
+            <div class="tituloh2">
+                <h2><b>[[#{info.title}]]</b></h2>
+            </div>
+            <div class="tituloh3">
+                <h3><b> [[#{info.about_us}]]</b></h3>
+            </div>
+            <div class="texto">
+                <p>
+                    <span>[[#{info.about_us_text}]]</span>
+                    <br></br>
+                    <span>[[#{info.about_us_text_2}]]</span>
+                    <br></br>
+                    <span>[[#{info.about_us_text_3}]]</span>
+                </p>
+            </div>
+
+            <!--<div class="tituloh3">
+                    <h3><b>
+                        [[#info.why_title]]
+                    </b></h3>
+            </div>-->
+
+            <div class="tituloh3">
+                <h3><b>[[#{info.clear_explanation}]]</b></h3>
+            </div>
+
+            <iframe class=ralph
+                    src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <footer th:fragment="footer" class="bg-dark text-white mt-5 p-2 d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center" style="font-size: 14px">[[#{footer.texto}]]></p>
+                </div>
+            </div>
+        </footer>
 
     </body>
-
-</html>
