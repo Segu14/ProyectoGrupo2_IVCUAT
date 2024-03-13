@@ -2,117 +2,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-    <body>
-    <!-- Titulo de la página -->
-        <!-- <section th:fragment="titulo">
-            <div class="tituloh2">
-                <h2><b>
-                        INFORMACIÓN
-                    </b></h2>
-            </div> 
-            <div class="tituloh3">
-                <h3><b>
-                        Conócenos
-                    </b></h3>
-            </div>
-            <div class="texto">
-                <p>
-                    HERMES es una tienda digital que se dedica a vender productos libres de cualquier prueba realizada
-                    en animales. Desafortunadamente, esta motivación fue impulsada gracias a que en la actualidad, la preocupación por la 
-                    agresión y el abuso hacia los animales en manos de empresas que realizan experimentos para la producción de productos, 
-                    como cosméticos y artículos de higiene, ha alcanzado niveles significativos. 
-                    <br><br>
-                    A medida que la sociedad se vuelve más consciente de la necesidad de un trato respetuoso hacia los seres vivos, la presión
-                    sobre las empresas para adoptar prácticas más éticas y sostenibles se intensifica, fomentando así un cambio gradual en la 
-                    industria hacia enfoques más compasivos y responsables. 
-                    <br><br>
-                    En este planeta habitan criaturas hermosas, al igual que valiosas. Desafortunadamente muchas de estas han sido utilizadas
-                    como objetos de prueba, o como el termino comunmente utilizado, "ratas de laboratorio". Nuestro objetivo es aportar nuestro 
-                    grano de arena educando a los usuarios sobre la gravedad de la situación y darles la opción a estos de aportar su propio 
-                    granito de arena.
-                </p>                       
-            </div>
+<head>
+    <title th:text="#{header.title}">HERMES</title>
+    <meta charset="UTF-8">
+</head>
 
-            <div class="tituloh3">
-                <h3><b>
-                    ¿Por Qué Hermes?
-                </b></h3>
-            </div>
-            
-            <div class="texto">
-                <p>
-                    En la mitología griega, Hermes es comunmente conocido como el dios mensajero, el sitio ofrece sistema de envío a tu hogar,
-                    así que podría soportar esa idea. Pero principalmente, creímos que el nombre encajaría ya que Hermes es un dios sabio y
-                    puro que le brindaba creatividad a los mortales para superarse a sí mismos, motivandolos a alcanzar sus metas. Creemos que
-                    el sitio puede modernizar esta idea de motivar al pueblo por medio de contribuir a la ayuda.
-                    <br><br>
-                    Entre sus muchos apodos, Hermes también era conocido como el dios pastor, un dios amante de los animales también apodado
-                    por ser el dios de la negociación, cercano a la humanidad y de buen corazón es el símbolo perfecto para el mensaje que 
-                    queremos dar.
-                </p>                       
-            </div>
-            
-            <div class="tituloh3">
-                <h3><b>
-                    Si Aún No Te Ha Quedado Claro
-                </b></h3>
-            </div>
-            
-            <iframe class=ralph 
-                    src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>            
-            </iframe>
-            
-            <div class="tituloh3">
-                <h3><b>
-                    Empresas Que Realizan Pruebas En Animales
-                </b></h3>
-            </div>
-            
-            <img class="companhias" src="img/companhias.png" alt="compañias"/>
-            
-        </section>
-<body> -->
+<body>
 
 <!-- Titulo de la página -->
-        <section th:fragment="titulo">
-            <div class="tituloh2">
-                <h2><b>[[#{info.title}]]</b></h2>
-            </div>
-            <div class="tituloh3">
-                <h3><b> [[#{info.about_us}]]</b></h3>
-            </div>
-            <div class="texto">
-                <p>
-                    <span>[[#{info.about_us_text}]]</span>
-                    <br></br>
-                    <span>[[#{info.about_us_text_2}]]</span>
-                    <br></br>
-                    <span>[[#{info.about_us_text_3}]]</span>
-                </p>
-            </div>
+    <section th:fragment="titulo">
+        <div class="tituloh2">
+            <h2><b>[[#{info.title}]]</b></h2>
+        </div>
+        <div class="tituloh3">
+            <h3><b> [[#{info.about_us}]]</b></h3>
+        </div>
+        <div class="texto">
+            <p>
+                <span>[[#{info.about_us_text}]]</span>
+                <br></br>
+                <span>[[#{info.about_us_text_2}]]</span>
+                <br></br>
+                <span>[[#{info.about_us_text_3}]]</span>
+            </p>
+        </div>
+        <div class="tituloh3">
+            <h3><b> [[#{info.why_title}]]</b></h3>
+        </div>
+        <div class="texto">
+            <p>
+                <span>[[#{info.why_text_1}]]</span>
+                <br></br>
+                <span>[[#{info.why_text_2}]]</span>
+            </p>
+        </div>
+        <div class="tituloh3">
+            <h3><b>[[#{info.clear_explanation}]]</b></h3>
+        </div>
 
-            <!--<div class="tituloh3">
-                    <h3><b>
-                        [[#info.why_title]]
-                    </b></h3>
-            </div>-->
+        <iframe class=ralph
+                src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+        </iframe>
 
-            <div class="tituloh3">
-                <h3><b>[[#{info.clear_explanation}]]</b></h3>
-            </div>
+        <div class="tituloh3">
+            <h3><b> [[#{info.companies_title}]]</b></h3>
+        </div>
+        
+        <img class="companhias" src="img/companhias.png" alt="compañias"/>
+        <!-- cuando corremos con este img se cae la pagina de informacion -->
+        
+    </section>
 
-            <iframe class=ralph
-                    src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-            </iframe>
-
-        </section>
-
-    </body>
+</body>
     
 </html>

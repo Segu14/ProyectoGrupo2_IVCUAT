@@ -75,8 +75,8 @@ button:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 1120px;
-    height: 630px;
+    width: 1370px;
+    height: 780px;
 }
 
 .offcanvas-body {
@@ -84,8 +84,8 @@ button:hover {
     }
 
 .offcanvas-body img {
-        display: block; /* Para asegurar que la imagen sea tratada como bloque */
-        margin: 0 auto; /* Auto-margin para centrar la imagen horizontalmente */
+    display: block; /* Para asegurar que la imagen sea tratada como bloque */
+    margin: 0 auto; /* Auto-margin para centrar la imagen horizontalmente */
 }
 
 .companhias {
