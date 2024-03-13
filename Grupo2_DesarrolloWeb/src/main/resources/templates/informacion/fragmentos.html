@@ -2,56 +2,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-    <body>
+<head>
+    <title th:text="#{header.title}">HERMES</title>
+    <meta charset="UTF-8">
+</head>
 
-        <!-- Titulo de la página -->
-        <section th:fragment="titulo">
-            <div class="tituloh2">
-                <h2><b>
-                        INFORMACIÓN
-                    </b></h2>
-            </div> 
-            <div class="tituloh3">
-                <h3><b>
-                        ¿Quiénes Somos?
-                    </b></h3>
-            </div>
-            <div class="texto">
-                <p>
-                    HERMES es una tienda digital que se dedica a vender productos libres de cualquier prueba realizada
-                    en animales. Desafortunadamente, esta motivación fue impulsada gracias a que en la actualidad, la preocupación por la 
-                    agresión y el abuso hacia los animales en manos de empresas que realizan experimentos para la producción de productos, 
-                    como cosméticos y artículos de higiene, ha alcanzado niveles significativos. 
-                    <br></br>
-                    A medida que la sociedad se vuelve más consciente de la necesidad de un trato respetuoso hacia los seres vivos, la presión
-                    sobre las empresas para adoptar prácticas más éticas y sostenibles se intensifica, fomentando así un cambio gradual en la 
-                    industria hacia enfoques más compasivos y responsables. 
-                    <br></br>
-                    En este planeta habitan criaturas hermosas, al igual que valiosas. Desafortunadamente muchas de estas han sido utilizadas
-                    como objetos de prueba, o como el termino comunmente utilizado, "ratas de laboratorio". Nuestro objetivo es aportar nuestro 
-                    grano de arena educando a los usuarios sobre la gravedad de la situación y darles la opción a estos de aportar su propio 
-                    granito de arena.
-                </p>                       
-            </div>
+<body>
 
-            <div class="tituloh3">
-                <h3><b>
-                    Si Aún No Te Ha Quedado Claro...
-                </b></h3>
-            </div>
-            
-            <iframe class=ralph 
-                    src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>            
-            </iframe>
+<!-- Titulo de la página -->
+<section th:fragment="titulo">
+    <div class="tituloh2">
+        <h2><b th:text="#{info.title}">INFORMACIÓN</b></h2>
+    </div>
+    <div class="tituloh3">
+        <h3><b th:text="#{info.about_us}">¿Quiénes Somos?</b></h3>
+    </div>
+    <div class="texto">
+        <p>
+            <span th:text="#{info.about_us_text}">HERMES es una tienda digital dedicada a vender productos libres de cualquier prueba realizada en animales. Desafortunadamente, esta motivación fue impulsada gracias a que en la actualidad, la preocupación por la agresión y el abuso hacia los animales en manos de empresas que realizan experimentos para la producción de productos, como cosméticos y artículos de higiene, ha alcanzado niveles significativos.</span>
+            <br></br>
+            <span th:text="#{info.about_us_text_2}">A medida que la sociedad se vuelve más consciente de la necesidad de un trato respetuoso hacia los seres vivos, la presión sobre las empresas para adoptar prácticas más éticas y sostenibles se intensifica, fomentando así un cambio gradual en la industria hacia enfoques más compasivos y responsables.</span>
+            <br></br>
+            <span th:text="#{info.about_us_text_3}">En este planeta habitan criaturas hermosas, al igual que valiosas. Desafortunadamente muchas de estas han sido utilizadas como objetos de prueba, o como el término comúnmente utilizado, "ratas de laboratorio". Nuestro objetivo es aportar nuestro grano de arena educando a los usuarios sobre la gravedad de la situación y darles la opción a estos de aportar su propio granito de arena.</span>
+        </p>
+    </div>
 
+    <div class="tituloh3">
+        <h3><b th:text="#{info.clear_explanation}">Si Aún No Te Ha Quedado Claro...</b></h3>
+    </div>
 
-            <img class=img src="img/pegasus.png" alt="Pegasus">
+    <iframe class=ralph
+            src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
 
-        </section>
+    <img class=img src="img/pegasus.png" alt="Pegasus">
+</section>
 
-    </body>
-
-</html>
+<footer th:fragment="footer" class="bg-dark text-white mt-5 p-2 d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="col">
+            <p class="lead text-center" style="font-size: 14px"
+               th:text="#{footer.texto}">© Universidad Fidélitas - Grupo 2</p>
+        </div>
+    </div>
+</footer>
