@@ -6,10 +6,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 10 mar 2024, 18:49:52
     Author     : sebas
 */
-header {
-    position: static;
-}
-
 header .container {
     height: 80px;
 }
@@ -33,9 +29,6 @@ header .container {
     margin-top: -15px;
 }
 
-button:hover {
-    color:green;
-}
 
 .lead {
     font-size: 12px;
@@ -43,10 +36,30 @@ button:hover {
     padding-top: 10px;
 }
 
+
+.btn-link{
+    margin-left: 15px;
+}
+
+.dropdown {
+    margin-top: -35px;
+    margin-left: 1415px;
+}
+
+.dropdown-menu {
+    min-width: 30px;
+    margin-right: 10px;
+}
+
+.dropdown-item {
+    padding: 10px 10px;
+}
+
 .texto {
     text-align: justify;
     margin-left: 70px;
     margin-right: 70px;
+    margin-top: 15px;
     font-size: 17px;
 }
 
@@ -80,8 +93,8 @@ button:hover {
 }
 
 .offcanvas-body {
-        text-align: center; /* Centrar el contenido dentro de la offcanvas-body */
-    }
+    text-align: center; /* Centrar el contenido dentro de la offcanvas-body */
+}
 
 .offcanvas-body img {
     display: block; /* Para asegurar que la imagen sea tratada como bloque */
@@ -91,4 +104,16 @@ button:hover {
 .companhias {
     width: 1500px;
     margin-left: 20px;
+}
+
+a{
+    font-family: Times New Roman;
+    font-size: 36px;
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0dab76;
+    text-decoration: none;
 }

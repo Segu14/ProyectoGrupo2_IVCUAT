@@ -13,7 +13,7 @@ public class CategoriaController {
     @RequestMapping("/categoria")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
-        return "/categoria/plantilla_categoria";
+        return "/categoria/contenido";
     }
     
 }
