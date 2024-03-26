@@ -104,7 +104,9 @@ header .container {
 .btn-group-vertical {
     margin-top: 25px;
     width: 215px;
+    font-family: Arial;
 }
+
 
 .companhias {
     width: 1500px;

@@ -62,28 +62,28 @@
                             </div>
                             <div class="offcanvas-body">
                                 <div>
-                                    <img src="img/avatar.png" height="175" alt="alt"/>
+                                    <a href="/login"> <img src="img/avatar.png" height="175" alt="alt"/> </a>
                                     <br>
                                         
-                                        <a href="/login"><b>[[#{login.texto}]]</b></a>
-                                        <br><br>
                                         <a href="/categoria"><b>[[#{categoria.texto}]]</b></a>
                                         <br><br>
                                         <a href="/informacion"><b>[[#{informacion.texto}]]</b></a>
 
-                                        
-                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                        <button type="button" class="btn btn-success">[[#{informacion.texto}]]</button>
+                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group"> 
+                                        <a th:href="@{/informacion}" class="btn btn-success">
+                                            <button class="btn btn-success">[[#{informacion.texto}]]</button>
+                                        </a>
                                         <div class="btn-group" role="group">
-                                          <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                            [[#{categoria.texto}]]
-                                          </button>
-                                          <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                          </ul>
+                                            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                [[#{categoria.texto}]]
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            </ul>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
