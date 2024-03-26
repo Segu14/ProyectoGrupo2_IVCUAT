@@ -10,7 +10,6 @@ header .container {
     height: 80px;
 }
 
-
 .col-md-12, .tituloh1{
     margin-top: -20px;
     text-align: center;
@@ -93,12 +92,18 @@ header .container {
 }
 
 .offcanvas-body {
-    text-align: center; /* Centrar el contenido dentro de la offcanvas-body */
+    width: 249px;
 }
 
 .offcanvas-body img {
     display: block; /* Para asegurar que la imagen sea tratada como bloque */
     margin: 0 auto; /* Auto-margin para centrar la imagen horizontalmente */
+    margin-top: 45px;
+}
+
+.btn-group-vertical {
+    margin-top: 25px;
+    width: 215px;
 }
 
 .companhias {
@@ -106,8 +111,8 @@ header .container {
     margin-left: 20px;
 }
 
-a{
-    font-family: Times New Roman;
+.offcanvas-body a{
+    font-family: Sans Serif;
     font-size: 36px;
     color:black;
     text-decoration: none;

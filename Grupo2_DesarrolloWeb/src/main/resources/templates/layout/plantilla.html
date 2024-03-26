@@ -56,19 +56,27 @@
                             </svg>
                         </button>
 
-                        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                        <div class="offcanvas offcanvas-start show" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="width: 250px">
                             <div class="offcanvas-header">
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
                                 <div>
-                                    <img src="https://static.vecteezy.com/system/resources/previews/005/005/840/non_2x/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg" height="250" alt="alt"/>
+                                    <img src="img/avatar.png" height="175" alt="alt"/>
                                     <br>
-
-                                        <a href="/categoria"><b>[[#{categoria.texto}]]</b></a>
-                                        <br><br>
-                                        <a href="/informacion"><b>[[#{informacion.texto}]]</b></a>
                                         
+                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <button type="button" class="btn btn-success">[[#{informacion.texto}]]</button>
+                                        <div class="btn-group" role="group">
+                                          <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            [[#{categoria.texto}]]
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                          </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
