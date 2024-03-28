@@ -40,7 +40,7 @@
                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                         </svg>
                                     </span>
-                                    <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" th:placeholder="#{navbar.search}" aria-label="Buscar" aria-describedby="basic-addon1">
                                         <ul class="navbar-nav"></ul>
                                 </div>
                             </form>
@@ -56,7 +56,7 @@
                             </svg>
                         </button>
 
-                        <div class="offcanvas offcanvas-start show" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="width: 250px">
+                        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" style="width: 250px">
                             <div class="offcanvas-header">
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
@@ -64,26 +64,26 @@
                                 <div>
                                     <a href="/login"> <img src="img/avatar.png" height="175" alt="alt"/> </a>
                                     <br>
-                                        
-                                        <a href="/categoria"><b>[[#{categoria.texto}]]</b></a>
-                                        <br><br>
-                                        <a href="/informacion"><b>[[#{informacion.texto}]]</b></a>
 
-                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group"> 
-                                        <a th:href="@{/informacion}" class="btn btn-success">
-                                            <button class="btn btn-success">[[#{informacion.texto}]]</button>
-                                        </a>
-                                        <div class="btn-group" role="group">
+                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                         
+                                        <button onclick="location.href='/informacion'" type="button" class="btn btn-success">[[#{informacion.texto}]]</button>
+                                        
+                                        <div class="btn-group">
                                             <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                [[#{categoria.texto}]]
+                                              [[#{categoria.texto}]]
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                              <li><a style="font-family:Arial; font-size: 18px; width: 215px; text-align: center" 
+                                                     class="dropdown-item" href="#">Action</a></li>
+                                              <li><a style="font-family:Arial; font-size: 18px; width: 215px; text-align: center" 
+                                                     class="dropdown-item" href="#">Another action</a></li>
+                                              <li><a style="font-family:Arial; font-size: 18px; width: 215px; text-align: center" 
+                                                     class="dropdown-item" href="#">Something else here</a></li>
                                             </ul>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>

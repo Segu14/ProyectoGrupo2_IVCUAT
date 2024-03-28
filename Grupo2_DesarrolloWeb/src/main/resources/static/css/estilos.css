@@ -107,6 +107,13 @@ header .container {
     font-family: Arial;
 }
 
+.btn-success a{
+    font-family: Arial;
+}
+
+.dropdown-menu a{
+    font-family: Arial;
+}
 
 .companhias {
     width: 1500px;
