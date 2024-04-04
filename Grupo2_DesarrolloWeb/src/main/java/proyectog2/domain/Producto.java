@@ -15,7 +15,7 @@ public class Producto implements Serializable {
     @Column(name="id_producto")
     private Long idProducto;
     //private Long idCategoria;  ya no se usa por el @manyToOne
-    private String nombreProducto;
+    private String descripcion;
     private String detalle;
     private double precio;
     private int existencias;
@@ -30,8 +30,8 @@ public class Producto implements Serializable {
     public Producto() {
     }
 
-    public Producto(String nombreProducto, boolean activo) {
-        this.nombreProducto = nombreProducto;
+    public Producto(String descripcion, boolean activo) {
+        this.descripcion = descripcion;
         this.activo = activo;
     }
     
