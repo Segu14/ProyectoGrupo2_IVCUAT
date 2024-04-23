@@ -25,11 +25,13 @@ public class Usuario implements Serializable{
     private String username;
     @NotEmpty
     private String password;
-        private String nombre;
+    @NotEmpty
+    private String nombre;
+    @NotEmpty
     private String apellidos;
-    private String correo;
+    @NotEmpty
     private String telefono;
-    private String rutaImagen;
+    @NotEmpty
     private boolean activo;
     
     @OneToMany

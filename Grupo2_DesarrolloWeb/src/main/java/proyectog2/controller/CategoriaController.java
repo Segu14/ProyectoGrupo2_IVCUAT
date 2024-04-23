@@ -1,8 +1,8 @@
 package proyectog2.controller;
 
+import java.util.List;
 import proyectog2.domain.Categoria;
 import proyectog2.service.CategoriaService;
-import proyectog2.service.impl.FirebaseStorageServiceImpl;
 import lombok.extern.slf4j.Slf4j; // Manejo controladores con interfaz en la vista
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,31 +18,24 @@ import org.springframework.web.multipart.MultipartFile;
 public class CategoriaController {
     
     @Autowired
-    private CategoriaService categoriaService;
+    CategoriaService categoriaService;
     
     @GetMapping("/listado")
     private String listado(Model model) {
-        var categorias = categoriaService.getCategorias(false);
-        model.addAttribute("categorias", categorias);
-        model.addAttribute("totalCategorias",categorias.size());
+        List<Categoria> lista = categoriaService.getCategorias(false);
+        model.addAttribute("categorias", lista);
+        model.addAttribute("totalCategorias",lista.size());
         return "/categoria/listado";
     }
     
-     @GetMapping("/nuevo")
+    @GetMapping("/nuevo")
     public String categoriaNuevo(Categoria categoria) {
         return "/categoria/modifica";
     }
-
-    @Autowired
-    private FirebaseStorageServiceImpl firebaseStorageService;
+    
     
     @PostMapping("/guardar")
-    public String categoriaGuardar(Categoria categoria,
-            @RequestParam("imagenFile") MultipartFile imagenFile) {        
-        if (!imagenFile.isEmpty()) {
-            categoriaService.save(categoria);
-            
-        }
+    public String categoriaGuardar(Categoria categoria) {
         categoriaService.save(categoria);
         return "redirect:/categoria/listado";
     }
@@ -59,4 +52,5 @@ public class CategoriaController {
         model.addAttribute("categoria", categoria);
         return "/categoria/modifica";
     }   
+    
 }

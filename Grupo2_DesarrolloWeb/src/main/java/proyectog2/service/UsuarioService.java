@@ -17,12 +17,6 @@ public interface UsuarioService {
     // Se obtiene un Usuario, a partir del username y el password de un usuario
     public Usuario getUsuarioPorUsernameYPassword(String username, String password);
     
-    // Se obtiene un Usuario, a partir del username y el password de un usuario
-    public Usuario getUsuarioPorUsernameOCorreo(String username, String correo);
-    
-    // Se valida si existe un Usuario considerando el username
-    public boolean existeUsuarioPorUsernameOCorreo(String username, String correo);
-    
     // Se inserta un nuevo usuario si el id del usuario esta vacío
     // Se actualiza un usuario si el id del usuario NO esta vacío
     public void save(Usuario usuario,boolean crearRolUser);

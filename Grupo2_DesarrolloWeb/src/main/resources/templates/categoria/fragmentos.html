@@ -1,35 +1,180 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-
+    
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TechShop</title>
+    </head>
     <body>
-
-        <section th:fragment="lorem" class="texto">
-            
-            <p>
-                CATEGORIAAA ipsum dolor sit amet consectetur adipiscing elit, vestibulum neque penatibus feugiat parturient praesent duis imperdiet, auctor posuere nulla habitasse dignissim viverra. Quisque tincidunt quis at platea class ullamcorper diam eget lacus netus lacinia, ad volutpat nisl dignissim suspendisse felis cum hendrerit arcu. In feugiat morbi nisi risus enim inceptos ad, dui vel quam hac fusce pharetra, ut mus aptent ligula nascetur suspendisse.
-                <br>
-                Interdum posuere nibh varius laoreet platea fames senectus, dignissim mi tincidunt nascetur mollis eget, purus penatibus blandit dictumst mattis cum. Est facilisi rhoncus venenatis donec per dignissim eget dapibus, purus fermentum faucibus porta justo torquent interdum nascetur ut, vestibulum nulla eu curabitur netus tristique sed. Leo pellentesque blandit enim tempor placerat felis eget lacinia bibendum, ultrices porttitor condimentum nunc platea morbi ullamcorper id, nam lacus egestas turpis cubilia sollicitudin mattis natoque. Ullamcorper magna nascetur a purus mus nulla nisi congue litora iaculis hac felis rutrum habitasse, eget curae dictum suscipit quisque bibendum dapibus dictumst montes malesuada diam imperdiet interdum.
-                <br>
-                Augue sed venenatis hac imperdiet torquent fermentum condimentum suscipit, luctus ante nunc neque cum eros cubilia, metus ut phasellus accumsan lobortis elementum nisl mattis, himenaeos fames ultrices justo faucibus eleifend. Facilisi sociis metus justo velit nisi eros rhoncus tempus, vulputate nisl penatibus nostra pretium congue placerat, varius ultricies ac nascetur molestie in commodo. Ut non faucibus aptent et aliquet molestie iaculis hac tempor tristique, congue ridiculus nisl porta fringilla curabitur nunc netus tincidunt, lacus eget varius felis viverra quisque vehicula vulputate magnis.
-                <br>
-                Molestie feugiat conubia curabitur fusce condimentum tempor natoque blandit interdum phasellus sapien ligula orci, dictumst aenean donec convallis lacinia cubilia semper inceptos duis justo enim. Suscipit mollis sed nisi sapien tortor ullamcorper vel iaculis augue pulvinar, eleifend nibh sem viverra arcu pellentesque sollicitudin libero porta, potenti turpis fusce lacinia inceptos aptent praesent lectus ultricies. Mattis vulputate leo sociosqu velit enim mollis lobortis, ultricies quisque etiam mi sociis.
-                <br>
-                Lacus porta vitae gravida tristique eu litora dapibus congue natoque, non habitasse posuere parturient turpis quam nisi fringilla mattis inceptos, proin blandit accumsan lacinia leo sodales placerat ornare. Eget dictum penatibus interdum vulputate curabitur dis leo, tempus conubia lobortis augue morbi nibh at, donec bibendum rhoncus feugiat pretium mi, sociis faucibus convallis nulla blandit est. Libero scelerisque curabitur metus vel facilisis luctus velit sociis dignissim, odio convallis curae aliquet condimentum taciti fusce nostra feugiat, vitae justo fames hendrerit nisi litora pharetra cum.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit, vestibulum neque penatibus feugiat parturient praesent duis imperdiet, auctor posuere nulla habitasse dignissim viverra. Quisque tincidunt quis at platea class ullamcorper diam eget lacus netus lacinia, ad volutpat nisl dignissim suspendisse felis cum hendrerit arcu. In feugiat morbi nisi risus enim inceptos ad, dui vel quam hac fusce pharetra, ut mus aptent ligula nascetur suspendisse.
-                <br>
-                Interdum posuere nibh varius laoreet platea fames senectus, dignissim mi tincidunt nascetur mollis eget, purus penatibus blandit dictumst mattis cum. Est facilisi rhoncus venenatis donec per dignissim eget dapibus, purus fermentum faucibus porta justo torquent interdum nascetur ut, vestibulum nulla eu curabitur netus tristique sed. Leo pellentesque blandit enim tempor placerat felis eget lacinia bibendum, ultrices porttitor condimentum nunc platea morbi ullamcorper id, nam lacus egestas turpis cubilia sollicitudin mattis natoque. Ullamcorper magna nascetur a purus mus nulla nisi congue litora iaculis hac felis rutrum habitasse, eget curae dictum suscipit quisque bibendum dapibus dictumst montes malesuada diam imperdiet interdum.
-                <br>
-                Augue sed venenatis hac imperdiet torquent fermentum condimentum suscipit, luctus ante nunc neque cum eros cubilia, metus ut phasellus accumsan lobortis elementum nisl mattis, himenaeos fames ultrices justo faucibus eleifend. Facilisi sociis metus justo velit nisi eros rhoncus tempus, vulputate nisl penatibus nostra pretium congue placerat, varius ultricies ac nascetur molestie in commodo. Ut non faucibus aptent et aliquet molestie iaculis hac tempor tristique, congue ridiculus nisl porta fringilla curabitur nunc netus tincidunt, lacus eget varius felis viverra quisque vehicula vulputate magnis.
-                <br>
-                Molestie feugiat conubia curabitur fusce condimentum tempor natoque blandit interdum phasellus sapien ligula orci, dictumst aenean donec convallis lacinia cubilia semper inceptos duis justo enim. Suscipit mollis sed nisi sapien tortor ullamcorper vel iaculis augue pulvinar, eleifend nibh sem viverra arcu pellentesque sollicitudin libero porta, potenti turpis fusce lacinia inceptos aptent praesent lectus ultricies. Mattis vulputate leo sociosqu velit enim mollis lobortis, ultricies quisque etiam mi sociis.
-                <br>
-                Lacus porta vitae gravida tristique eu litora dapibus congue natoque, non habitasse posuere parturient turpis quam nisi fringilla mattis inceptos, proin blandit accumsan lacinia leo sodales placerat ornare. Eget dictum penatibus interdum vulputate curabitur dis leo, tempus conubia lobortis augue morbi nibh at, donec bibendum rhoncus feugiat pretium mi, sociis faucibus convallis nulla blandit est. Libero scelerisque curabitur metus vel facilisis luctus velit sociis dignissim, odio convallis curae aliquet condimentum taciti fusce nostra feugiat, vitae justo fames hendrerit nisi litora pharetra cum.
-            </p>
-            
+        <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
+        <section th:fragment="botonesAgregar" class="py-4 mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">   
+                        <button 
+                            type="button" 
+                            class="btn btn-primary btn-block" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarCategoria">
+                            <i class="fas fa-plus"></i> [[#{categoria.agregar}]]
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
-        
+
+        <!-- 2 Fragmento para agregar categoria, es la ventana modal -->
+        <section th:fragment="agregarCategoria">
+            <div id="agregarCategoria" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header text-white">
+                            <h5 class="modal-title">[[#{categoria.agregar}]]</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/categoria/guardar}" th:object="${categoria}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label type=text name="nombreCategoria">[[#{categoria.nombre}]]</label>
+                                    <input type="text" class="form-control" name="nombreCategoria" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="activo">[[#{categoria.activo}]]</label>
+                                    <input class="form-check-input" type="checkbox" name="activo" id="activo"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad categoria -->
+        <section th:fragment="listadoCategorias" id="categorias">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>[[#{categoria.listado}]]</h4>
+                            </div>
+                            <div th:if="${categorias != null and !categorias.empty}">
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-dark">
+                                        <tr><th>#</th>
+                                            <th>[[#{categoria.nombre}]]</th>
+                                            <th>[[#{categoria.activo}]]</th>
+                                            <th></th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="categoria, contador : ${categorias}">
+                                            <td>[[${contador.count}]]</td>
+                                            <td>[[${categoria.nombreCategoria}]]</td>
+                                            <td th:text="${categoria.activo} ? 'Activa' : 'Inactiva'" />
+                                            <td><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
+                                                   class="btn btn-danger">
+                                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
+                                                <a th:href="@{/categoria/modificar/}+${categoria.idCategoria}"
+                                                   class="btn btn-success">
+                                                    <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]</a></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${categorias == null or categorias.empty}">
+                                <span>[[#{lista.vacia}]]</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center bg-success text-white mb-3">
+                            <div class="card-body">
+                                <h3>[[#{categoria.total}]]</h3>
+                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalCategorias}]]</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
+        <section th:fragment="editarCategoria">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST"
+                          th:action="@{/categoria/guardar}" 
+                          th:object="${categoria}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/>
+                        <section th:replace="~{categoria/fragmentos :: botonesEditar}"/>
+                        <div id=details>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>[[#{accion.actualizar}]]</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <label for="nombre">[[#{categoria.nombre}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="nombreCategoria" th:field="*{nombreCategoria}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="activo">[[#{categoria.activo}]]</label>
+                                                    <input class="form-check-input" 
+                                                           type="checkbox" 
+                                                           name="activo" 
+                                                           id="activo"
+                                                           th:field="*{activo}">
+                                                </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
+        <section th:fragment="botonesEditar">
+            <div class="container py-4 mb-4 bg-light">
+                <div class="row">
+                    <div class="col-md-4 d-grid">
+                        <a th:href="@{/categoria/listado}" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">                                
+                        <a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
+                           class="btn btn-danger">
+                            <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-check"></i> [[#{accion.guardar}]]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>

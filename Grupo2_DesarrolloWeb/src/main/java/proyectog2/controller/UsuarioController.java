@@ -2,7 +2,6 @@ package proyectog2.controller;
 
 import proyectog2.domain.Usuario;
 import proyectog2.service.UsuarioService;
-import proyectog2.service.FirebaseStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,20 +31,9 @@ public class UsuarioController {
         return "/usuario/modifica";
     }
 
-    @Autowired
-    private FirebaseStorageService firebaseStorageService;
-
     @PostMapping("/guardar")
     public String usuarioGuardar(Usuario usuario,
             @RequestParam("imagenFile") MultipartFile imagenFile) {
-        if (!imagenFile.isEmpty()) {
-            usuarioService.save(usuario,false);
-            usuario.setRutaImagen(
-                    firebaseStorageService.cargaImagen(
-                            imagenFile,
-                            "usuario",
-                            usuario.getIdUsuario()));
-        }
         usuarioService.save(usuario,true);
         return "redirect:/usuario/listado";
     }

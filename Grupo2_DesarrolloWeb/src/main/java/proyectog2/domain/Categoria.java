@@ -16,19 +16,18 @@ public class Categoria implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Long idCategoria;
-    private String descripcion;
-    private String rutaImagen;
+    private String nombreCategoria;
     private boolean activo;
 
-    @OneToMany
+    /*@OneToMany
     @JoinColumn(name = "id_categoria", updatable = false)
-    List<Producto> productos;
+    List<Producto> productos;*/
 
     public Categoria() {
     }
 
-    public Categoria(String descripcion, boolean activo) {
-        this.descripcion = descripcion;
+    public Categoria(String nombreCategoria, boolean activo) {
+        this.nombreCategoria = nombreCategoria;
         this.activo = activo;
     }
 

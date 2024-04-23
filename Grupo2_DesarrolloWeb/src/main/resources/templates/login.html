@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/199/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    
+<head>
+    
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+    <script th:scr="@{/js/rutinas.js}"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    
+    <title>Hermes</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header>HERMES</header>
+
+        <!-- <form method="POST" th:action="@{/login}"> -->
+
+            <div class="btn-group dropend lang">
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="img/translate.png" alt="translate" width="20px">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" th:href="@{/(lang=es)}">[[#{lang.es}]]</a></li>
+                  <li><a class="dropdown-item" th:href="@{/(lang=en)}">[[#{lang.en}]]</a></li>
+                </ul>
+            </div>
+            
+        <form method="POST" th:action="@{/login}">
+            <div class="field email">
+              <div class="input-area">
+                <input type="text" id=userEmail th:placeholder="#{login.user}">
+                <img src="img/arroba.png" alt="email" class="icon">
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+              </div>
+
+            </div>
+
+            <div class="field password" style="margin-bottom: -15px">
+              <div class="input-area">
+                <input type="password" th:placeholder="#{login.psswd}">
+                <img src="img/secured-lock.png" alt="password" class="icon">
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+              </div>
+
+            </div>
+        
+            <input type="submit" class="btn btn-success" th:value="#{login.btn}" style="margin-bottom: -25px">
+
+        </form>
+        <div class="sign-txt">
+            [[#{login.newuser}]]
+            <br> 
+            <a href="#">
+                [[#{login.btn_newuser}]]
+            </a>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+  
+</body>
+</html>
