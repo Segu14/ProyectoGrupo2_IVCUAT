@@ -41,7 +41,7 @@
                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                         </svg>
                                     </span>
-                                    <input type="text" class="form-control" th:placeholder="#{navbar.search}" aria-label="Buscar" aria-describedby="basic-addon1">
+                                    <input id="searchbar" type="text" class="form-control" th:placeholder="#{navbar.search}" aria-label="Buscar" aria-describedby="basic-addon1">
                                         <ul class="navbar-nav"></ul>
                                 </div>
                             </form>
@@ -88,13 +88,15 @@
                             </div>
                             <div class="offcanvas-body">
                                 <div>
-                                    <a th:href="@{/login}"> <img th:src="@{/img/avatar.png}" height="175" alt="alt"/> </a>
+                                    <a th:href="@{/login}"> <img th:src="@{/img/user.png}" height="175" alt="alt"/> </a>
                                     <br>
 
                                      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                         
-                                        <button onclick="location.href='/informacion'" type="button" class="btn btn-success">[[#{informacion.texto}]]</button>
                                         
+                                        <a th:href="@{/informacion}" class="info btn btn-success"
+                                           style="font-family:Arial; color: white; font-size: 17px;">
+                                            [[#{informacion.texto}]]</a>
+                                         
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                               [[#{categoria.texto}]]
