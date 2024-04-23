@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 
-<head>
+<head th:replace="~{layout/plantilla :: head}">
     <title th:text="#{header.title}">HERMES</title>
     <meta charset="UTF-8">
 </head>
@@ -41,12 +40,13 @@
             <h3><b>[[#{info.clear_explanation}]]</b></h3>
         </div>
 
-        <iframe class=ralph
-                src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
+        <iframe id="ralph" class="ralph"
+            src="https://www.youtube.com/embed/cmlITg5xIb0?si=tZ1SnbgZU9CHOPVd"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
         </iframe>
+
 
         <div class="tituloh3">
             <h3><b> [[#{info.companies_title}]]</b></h3>

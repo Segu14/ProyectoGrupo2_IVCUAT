@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class InformacionController {
     
     @RequestMapping("/informacion")
-    public String page(Model model) {
-        model.addAttribute("attribute", "value");
+    public String contenido(Model model) {
         return "/informacion/contenido";
     }
     
