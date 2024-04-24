@@ -34,26 +34,27 @@
                 </ul>
             </div>
             
-        <form method="POST" th:action="@{/login}">
-            <div class="field email">
+        <form method="POST" th:action="@{/login}" th:object="${usuario}">
+            <div class="field username">
               <div class="input-area">
-                <input type="text" id=userEmail th:placeholder="#{login.user}">
-                <img src="img/arroba.png" alt="email" class="icon">
+                <input type="text" for="username" id="username" th:placeholder="#{login.user}">
+                <img src="img/arroba.png" alt="username" class="icon">
                 <i class="error error-icon fas fa-exclamation-circle"></i>
               </div>
-
             </div>
 
-            <div class="field password" style="margin-bottom: -15px">
+            <div class="field password" style="margin-bottom: 15px">
               <div class="input-area">
-                <input type="password" th:placeholder="#{login.psswd}">
+                <input type="password" for="password" id="password" th:placeholder="#{login.psswd}">
                 <img src="img/secured-lock.png" alt="password" class="icon">
                 <i class="error error-icon fas fa-exclamation-circle"></i>
               </div>
 
             </div>
         
-            <input type="submit" class="btn btn-success" th:value="#{login.btn}" style="margin-bottom: -25px">
+            <button type="submit" class="btn btn-success">
+                [[#{login.btn}]]
+            </button>
 
         </form>
         <div class="sign-txt">

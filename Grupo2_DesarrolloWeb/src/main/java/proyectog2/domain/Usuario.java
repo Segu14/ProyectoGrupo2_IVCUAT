@@ -38,5 +38,13 @@ public class Usuario implements Serializable{
     @JoinColumn(name = "id_usuario")
     private List<Rol> roles;
     
+    public void imprimirDatosUsuario() {
+        System.out.println("ID: " + idUsuario);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellidos);
+        System.out.println("Teléfono: " + telefono);
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
+    }
 }
 
