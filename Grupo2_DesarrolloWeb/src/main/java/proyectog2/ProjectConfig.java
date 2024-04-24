@@ -58,13 +58,13 @@ public class ProjectConfig implements WebMvcConfigurer {
     }
     
     /*Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto */
-    @Override
+        @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/registro/nuevo").setViewName("/registro/nuevo");
-    }
+ }
     
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -88,7 +88,26 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-    
+    /*   @Bean
+    public UserDetailsService users() {
+        UserDetails admin = User.builder()
+                .username("juan")
+                .password("{noop}123")
+                .roles("USER", "VENDEDOR", "ADMIN")
+                .build();
+        UserDetails sales = User.builder()
+                .username("rebeca")
+                .password("{noop}456")
+                .roles("USER", "VENDEDOR")
+                .build();
+        UserDetails user = User.builder()
+                .username("pedro")
+                .password("{noop}789")
+                .roles("USER")
+                .build();
+        return new InMemoryUserDetailsManager(user, sales, admin);
+    }
+    */
     @Autowired
     private UserDetailsService userDetailsService;
     
