@@ -93,7 +93,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-        @Bean
+    /*   @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
                 .username("juan")
@@ -112,7 +112,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .build();
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
-    
+    */
     @Autowired
     private UserDetailsService userDetailsService;
     
