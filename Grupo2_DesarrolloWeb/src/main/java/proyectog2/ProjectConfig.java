@@ -71,22 +71,17 @@ public class ProjectConfig implements WebMvcConfigurer {
         http
                 .authorizeHttpRequests((request) -> request
                 .requestMatchers("/","/index","/errores/**",
-                        "/carrito/**","/informacion/**","/categoria/**",
+                        "/carrito/**","/informacion/**","/categoria/**","/producto/**", "/facturar/",
                         "/registro/**","/js/**","/webjars/**", "/css/**", "/img/**")
                         .permitAll() // Todos los usuarios tienen acceso a estas paginas del sitio.
                 .requestMatchers(
-                        "/producto/nuevo","/producto/guardar",
-                        "/producto/modificar/**","/producto/eliminar/**",
+                        "/producto/nuevo",
+                        "/producto/eliminar/**",
                         "/categoria/nuevo","/categoria/guardar",
                         "/categoria/modificar/**","/categoria/eliminar/**",
                         "/usuario/nuevo","/usuario/guardar",
                         "/usuario/modificar/**","/usuario/eliminar/**"
                 ).hasRole("ADMIN")
-                .requestMatchers(
-                        "/producto/listado"
-                ).hasAnyRole("ADMIN", "VENDEDOR")
-                .requestMatchers("/facturar/carrito")
-                .hasRole("USER")
                 )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll())

@@ -21,6 +21,7 @@ public class ProductoServiceImpl implements ProductoService{
     @Autowired
     private ProductoDao productoDao;
 
+    
     @Override
     @Transactional(readOnly = true)
     public List<Producto> getProductos(boolean activos) {
@@ -48,7 +49,8 @@ public class ProductoServiceImpl implements ProductoService{
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
-
+    
+    /*
     // Lista de productos con precio entre ordendados por descripción ConsultaAmpliada
     @Override
     @Transactional(readOnly = true)
@@ -67,5 +69,5 @@ public class ProductoServiceImpl implements ProductoService{
     public List<Producto> metodoNativo(double precioInf, double precioSup) {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
-
+    */
 }

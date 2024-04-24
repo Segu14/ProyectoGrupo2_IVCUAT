@@ -6,17 +6,16 @@
     <head th:replace="~{layout/plantilla :: head}">
 
         <title>HERMES</title>
-        <meta charset="UTF-8">
         
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
         
-        <section th:replace="~{layout/plantilla :: sidebar}"/>
+        <section th:replace="~{layout/plantilla :: sidebar}"/>  
         
         <section th:replace="~{layout/plantilla :: opciones}"/>
         
-        <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
+        <section th:replace="~{producto/fragmentos :: editarProducto}"/>
         
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
